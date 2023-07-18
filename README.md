@@ -10,5 +10,9 @@ This project investigated network quality, specifically aspects separate from Qu
 - Wireshark 3.6.2+
 
 ## Running
-1. Download 
+1. Download the file Dockerfile and the folder web-server into a directory and open a terminal window in this directory.
+2. Add the video you wish to play to the html folder 
+3. With Docker 24.0.4+ installed, run the command ***docker build -t webserver .*** (the final period is part of the command). This will take several seconds to run. 
+4. 
+5. 
 
