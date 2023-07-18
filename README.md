@@ -14,5 +14,29 @@ This project investigated network quality, specifically aspects separate from Qu
 2. Add the video you wish to play to the html folder 
 3. With Docker 24.0.4+ installed, run the command ***docker build -t webserver .*** (the final period is part of the command). This will take several seconds to run. 
 4. 
-5. 
+
+
+## Network Quality tree 
+1. The quality tree started with the highest node, microservice ecosystem quality
+2. From there we branch out to the qualities of a microservice ecosystem, categorized in 8 additional nodes: functional stability, performance, compatibility, usability, security, and reliability, maintainability, and portability
+3. Since our focus is security, we will solely expand on this node
+4. We add a single node, network quality, beneath security
+5. Network quality can be described in two ways: performance(Quality of Service) and communication
+6. Since the focus of our project is to analyze network quality excluding quality of service, we'll only build more nodes under the communication node
+7. Communication then splits up into two separate child nodes: benign and malware
+8. Since Snort is not built to detect vulnerabilities in code, we focus on building child nodes from the malware node
+9. This final step will give us the nodes necessary to define the way we can quantify network quality given that we're using Snort as our main tool
+10. From malware we create two more child nodes: severity (priority of alerts) and frequency (number of alerts)
+
+
+
+
+
+
+
+
+
+
+
+
 
