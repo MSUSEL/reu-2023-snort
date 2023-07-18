@@ -18,7 +18,7 @@ This project investigated network quality, specifically aspects separate from Qu
 
 ## Network Quality tree 
 1. The quality tree started with the highest node, microservice ecosystem quality
-2. From there we branch out to the qualities of a microservice ecosystem, categorized in 8 additional nodes: functional stability, performance, compatibility, usability, security, and reliability, maintainability, and portability
+2. From there we branch out to the qualities of a microservice ecosystem, categorized in 8 additional nodes: functional stability, performance, compatibility, usability, security, reliability, maintainability, and portability
 3. Since our focus is security, we will solely expand on this node
 4. We add a single node, network quality, beneath security
 5. Network quality can be described in two ways: performance(Quality of Service) and communication
