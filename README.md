@@ -2,11 +2,13 @@
 A repository to house the 2023 REU Snort project 
 
 ## Introduction
-This project investigated network quality, specifically aspects separate from Quality of Service and performance. It uses Snort and Wireshark to record packet data between a containerized web server and the host machine to simulate network traffic between microservice applications. 
+This project investigated network quality, specifically aspects separate from Quality of Service and performance. It uses Snort and Wireshark to record and detect potentially malicious packets between a containerized web server and the host machine to simulate traffic between microservice applications. 
 
 ## Tools
 - Snort 3.1.63.0+
 - Docker 24.0.4+
-- 
+- Wireshark 3.6.2+
 
+## Running
+1. Download 
 
