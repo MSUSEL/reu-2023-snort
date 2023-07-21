@@ -12,7 +12,18 @@ This project investigated network quality, specifically aspects separate from Qu
 ## Running
 
 ### Snort Configuration
-1. After installing snort 3.1.63.0 or a later version,
+1. After installing Snort 3.1.63.0 or a later version, install the community ruleset from the official Snort website.
+2. Navigate to */usr/local/etc* and create a new directory called rules.
+3. From the community ruleset, move the document titled *snort3-community.rules* into the new rules folder.
+4. Using the command *touch local.rules*, create a document to create your own Snort rules. This can be used to test your Snort configuration and make sure it is working. 
+5. By default, Snort configuration files should be located in */usr/local/etc/snort*. Navigate to this folder and open *snort_defaults.lua* in a text editor.
+6. Set the variable $RULE_PATH to */usr/local/etc/rules/* for easy access to these files.
+7. Now open *snort.lua*.
+8. Set the variable $HOME_NET to the IP address of your computer on the docker0 network. This is typically *172.17.0.1*.
+9. In section 7, uncomment the line with text *alert_fast = {}*.
+10. Between the brackets, add lines *file = true, packet = false, limit = 10,*.
+11. 
+12. 
 
 ### Benign Video
 1. Download the file Dockerfile and the folder web-server into a directory and open a terminal window in this directory.
@@ -22,7 +33,7 @@ This project investigated network quality, specifically aspects separate from Qu
 5. To begin the container, run the command ***docker run -d -p 8000:80 --name webserver benign:latest***
 6. In another terminal window, begin wireshark in packet sniffing mode with the command ***sudo wireshark***
 7. From the wireshark GUI, select the docker0 network to monitor traffic from.
-8. In a third terminal window, run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/USERNAME***. This will monitor network traffic on the docker0 network and log any alerts to your home directory in linux.
+8. In a third terminal window, run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/USERNAME***. This will monitor network traffic on the docker0 network and log any alerts to a document titled 'alert_fast.txt' located in your home directory in linux.
 9. Open google chrome and go to **localhost:8000**
 10. 
 
