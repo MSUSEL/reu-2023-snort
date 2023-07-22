@@ -27,8 +27,7 @@ This project investigated network quality, specifically aspects separate from Qu
                                             ]]
 11. In section 7, uncomment the line with text *alert_fast = {}*.
 12. Between the brackets, add lines *file = true, packet = false, limit = 10,*.
-13. 
-14. 
+13. Save and exit. Snort is now configured to log alerts. 
 
 ### Benign Video
 1. Download the file Dockerfile and the folder web-server into a directory and open a terminal window in this directory.
