@@ -39,7 +39,7 @@ This project investigated network quality, specifically aspects separate from Qu
 7. From the wireshark GUI, select the docker0 network to monitor traffic from.
 8. In a third terminal window, run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/USERNAME***. This will monitor network traffic on the docker0 network and log any alerts to a document titled 'alert_fast.txt' located in your home directory in linux.
 9. Open google chrome and go to **localhost:8000**
-10. Click the "DOWNLOAD" button, which should download the malware from the container to localhost.
+10. Click the "DOWNLOAD" button, which will download the malware from the container to localhost.
 11. Stop the container, save the wireshark packet capture and stop Snort. The alert file for snort will be saved in the home directory, and if alerts are triggered they will appear in this document. 
 
 
