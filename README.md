@@ -29,17 +29,18 @@ This project investigated network quality, specifically aspects separate from Qu
 12. Between the brackets, add lines *file = true, packet = false, limit = 10,*.
 13. Save and exit. Snort is now configured to log alerts. 
 
-### Benign Video
+### Downloading Malware from Web-server
 1. Download the file Dockerfile and the folder web-server into a directory and open a terminal window in this directory.
 2. Rename the directory to Benign
 3. Add the benign video you wish to play to the html folder 
-4. With Docker 24.0.4+ installed, run the command ***docker build -t benign .*** (the final period is part of the command). This will take several seconds to run. 
-5. To begin the container, run the command ***docker run -d -p 8000:80 --name webserver benign:latest***
+4. With Docker 24.0.4+ installed, run the command ***docker build -t malware:SHA-256 .*** (the final period is part of the command) where SHA-256 is the id of the malware. This is to keep things organized when several containers are created. This will take several seconds to run. 
+5. To begin the container, run the command ***docker run -d -p 8000:80 --name webserver malware:SHA-256***
 6. In another terminal window, begin wireshark in packet sniffing mode with the command ***sudo wireshark***
 7. From the wireshark GUI, select the docker0 network to monitor traffic from.
 8. In a third terminal window, run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/USERNAME***. This will monitor network traffic on the docker0 network and log any alerts to a document titled 'alert_fast.txt' located in your home directory in linux.
 9. Open google chrome and go to **localhost:8000**
-10. 
+10. Click the "DOWNLOAD" button, which should download the malware from the container to localhost.
+11. Stop the container, save the wireshark packet capture and stop Snort. The alert file for snort will be saved in the home directory, and if alerts are triggered they will appear in this document. 
 
 
 ## Network Quality tree 
