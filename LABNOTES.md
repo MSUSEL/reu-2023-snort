@@ -29,7 +29,7 @@
 ## Other Notes
 
 ### Yara
-Yara can not read packet captures. Github repository https://github.com/kevthehermit/YaraPcap is outdated and will not work even when changed to python3.
+Yara can not read packet captures. Github repository https://github.com/kevthehermit/YaraPcap is outdated and will not work even when converted to python3.
 
 ### Suricata
 Smaller community and less widely used, thus has an equivalent or smaller rule set. 
