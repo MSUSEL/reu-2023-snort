@@ -35,6 +35,6 @@ Yara can not read packet captures. Github repository https://github.com/kevthehe
 Smaller community and less widely used, thus has an equivalent or smaller rule set. 
 
 ### Bash script to find mp4 files
-Run in vol1/vol2/vol3/vol4 directory
+Run in any vol directory
 - for f in *; do cd $f; for g in *; do file $g; done; cd ..; done | grep MP4
 
