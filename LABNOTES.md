@@ -38,3 +38,10 @@ Smaller community and less widely used, thus has an equivalent or smaller rule s
 Run in any vol directory on malware computer
 - for f in *; do cd $f; for g in *; do file $g; done; cd ..; done | grep MP4
 
+## What worked
+
+### Logging alerts with custom rules
+
+- Created alert: *alert tcp any any -> $HOME_NET any (msg:"TCP connection test"; sid: 10001;rev:1;)*
+- run **snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/HOME_DIRECTORY**
+- stop snort using *ctrl + c*. All tcp files will be logged to a document named *alert_fast.txt* in home directory. 
