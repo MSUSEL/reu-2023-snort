@@ -29,7 +29,7 @@ This project investigated network quality, specifically aspects separate from Qu
 12. Between the brackets, add lines *file = true, packet = false, limit = 10,*.
 13. Save and exit. Snort is now configured to log alerts. 
 
-### Downloading Malware from Web-server
+### Downloading Malware from Docker nginx Container
 1. Download the file Dockerfile and the folder web-server into a directory and open a terminal window in this directory.
 2. Rename the directory to Benign
 3. Add the benign video you wish to play to the html folder 
