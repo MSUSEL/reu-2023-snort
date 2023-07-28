@@ -40,7 +40,13 @@ This project investigated network quality, specifically aspects separate from Qu
 8. In a third terminal window, run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/USERNAME***. This will monitor network traffic on the docker0 network and log any alerts to a document titled 'alert_fast.txt' located in your home directory in linux.
 9. Open google chrome and go to **localhost:8000**
 10. Click the "DOWNLOAD" button, which will download the malware from the container to localhost.
-11. Stop the container, save the wireshark packet capture and stop Snort. The alert file for snort will be saved in the home directory, and if alerts are triggered they will appear in this document. 
+11. Stop the container, save the wireshark packet capture and stop Snort. The alert file for snort will be saved in the home directory, and if alerts are triggered they will appear in this document.
+
+### Running Snort on Captured Wireshark Packets
+1. In the terminal, navigate to the directory containing the pcap files captured by wireshark.
+2. Run the command ***sudo snort -c /usr/local/etc/snort/snort.lua -r /home/USERNAME/DIRECTORYNAME/LOGNAME -k none -A alert_fast -l /home/USERNAME/logs*** where LOGNAME is the name of the pcap file you want to examine.
+3. The snort alert file will be saved as alert_fast.txt in the logs directory. Any trigged rules will log alerts here.
+
 
 
 ## Network Quality tree 
