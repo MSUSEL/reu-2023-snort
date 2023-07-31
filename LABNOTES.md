@@ -44,4 +44,10 @@ Run in any vol directory on malware computer
 
 - Created alert: *alert tcp any any -> $HOME_NET any (msg:"TCP connection test"; sid: 10001;rev:1;)*
 - run **snort -c /usr/local/etc/snort/snort.lua -i docker0 -k none -A alert_fast -l /home/HOME_DIRECTORY**
-- stop snort using *ctrl + c*. All tcp files will be logged to a document named *alert_fast.txt* in home directory. 
+- stop snort using *ctrl + c*. All tcp files will be logged to a document named *alert_fast.txt* in home directory.
+
+### Copied Community Rules into Custom Rules
+
+-Copied the community rules into the local rules file by using the vi command :r */rules/snort3-community.rules*
+-From there you can modify and experiment with community rules 
+
