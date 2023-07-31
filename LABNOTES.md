@@ -48,6 +48,6 @@ Run in any vol directory on malware computer
 
 ### Copied Community Rules into Custom Rules
 
--Copied the community rules into the local rules file by using the vi command :r */rules/snort3-community.rules*
--From there you can modify and experiment with community rules 
+- Copied the community rules into the local rules file by using the vi command :r */rules/snort3-community.rules*
+- From there you can modify and experiment with community rules 
 
